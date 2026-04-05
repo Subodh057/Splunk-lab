@@ -37,6 +37,13 @@ index=main sshd "Failed password"
 | where count > 5
 
 
+##splunk implementation
+Alert:configured to trigger when failed login attempts exceed a defined threshold.
+Dashboard Panel:Visualizes failed login attempts over time for monitoring and analysis.
+
+##Screenshot
+splunk implementation pictures are in screenshots folder.
+
 
 ## Outcome
 Successfully detected brute-force attempts by identifying multiple failed login attempts from the same IP.
