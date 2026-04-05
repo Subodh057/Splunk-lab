@@ -36,6 +36,17 @@ index=main sshd "Failed password"
 | stats count by ip
 | where count > 5
 
+## Screenshots
+
+### Failed Login Attempts
+![Failed Logs](screenshots/failed_logs.png)
+
+### IP Analysis
+![IP Analysis](screenshots/ip_analysis.png)
+
+### Brute Force Detection
+![Brute Force](screenshots/brute_force.png)
+
 
 ## Outcome
 Successfully detected brute-force attempts by identifying multiple failed login attempts from the same IP.
