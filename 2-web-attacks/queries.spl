@@ -1,0 +1,16 @@
+# 404 scanning detection
+index=main source="/var/log/nginx/access.log" 404
+| rex "^(?<ip>\S+)"
+| stats count by ip
+| where count > 5
+| sort - count
+
+# traffic monitoring
+index=main source="/var/log/nginx/access.log"
+| timechart span=1m count
+
+# admin targeting
+index=main source="/var/log/nginx/access.log" "/admin"
+| rex "^(?<ip>\S+)"
+| stats count by ip
+| sort - count
