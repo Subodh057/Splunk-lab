@@ -14,6 +14,15 @@ Detect suspicious web activity such as scanning and abnormal traffic using nginx
 This project analyzes web server logs to identify potential attacks such as page scanning and abnormal traffic patterns. It focuses on detecting suspicious behavior based on HTTP status codes and request frequency.
 
 ---
+## MITRE ATT&CK Mapping
+
+* Tactic: Reconnaissance (TA0043)
+* Technique: Active Scanning (T1595)
+* Tactic: Discovery (TA0007)
+* Technique: File and Directory Discovery (T1083)
+
+Explanation:
+The repeated 404 requests and endpoint probing align with T1595 (Active Scanning), where attackers actively probe web applications to discover valid paths and vulnerabilities.
 
 ## Detection Logic
 - Monitor HTTP 404 responses (page not found)
