@@ -21,7 +21,13 @@ This project analyzes SSH authentication logs to identify repeated failed login 
 
 index=main sshd "Failed password"
 
+### MITRE ATT&CK Mapping
 
+* Tactic: Credential Access (TA0006)
+* Technique: Brute Force (T1110)
+
+Explanation:
+This activity maps to T1110, where attackers attempt repeated password guesses to gain unauthorized access to user accounts via services like SSH.
 ### IP Extraction
 
 index=main sshd "Failed password"
