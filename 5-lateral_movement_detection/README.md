@@ -29,7 +29,16 @@ user=subodh src=10.0.0.5 dest=hostC action=ssh success
 These logs represent a user moving across different systems.
 
 ---
+## 🧠 MITRE ATT&CK Mapping
 
+This detection aligns with:
+
+- Technique ID: T1021
+- Technique Name: Remote Services
+- Tactic: Lateral Movement
+
+Description:
+Attackers use legitimate remote services like SSH, RDP, or SMB to move between internal systems after initial compromise.
 ## 🔍 Detection Logic (Splunk Query)
 
 The following SPL query is used to detect lateral movement:
