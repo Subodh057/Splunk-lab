@@ -24,3 +24,16 @@ Since this is a lab environment, lateral movement was simulated by generating sy
 user=subodh src=10.0.0.5 dest=hostA action=ssh success
 user=subodh src=10.0.0.5 dest=hostB action=ssh success
 user=subodh src=10.0.0.5 dest=hostC action=ssh success
+
+These logs represent a user moving across different systems.
+
+---
+
+## 🔍 Detection Logic (Splunk Query)
+
+The following SPL query is used to detect lateral movement:
+
+```spl
+index=*
+| stats dc(dest) as unique_hosts by user
+| where unique_hosts > 1
